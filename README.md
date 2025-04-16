@@ -32,9 +32,9 @@ El proceso abarcó desde la limpieza y preprocesamiento de datos hasta la implem
 
 | Modelo            | MAE (Baseline) |
 |-------------------|----------------|
-| Regresión Lineal  | 2962.55        |
-| Random Forest     | 1440.67        |
-| XGBoost           | 1496.08        |
+| Regresión Lineal  | 2297.88        |
+| Random Forest     | 1230.85        |
+| XGBoost           | 1375.80        |
 
 ---
 
@@ -42,7 +42,7 @@ El proceso abarcó desde la limpieza y preprocesamiento de datos hasta la implem
 
 Se utilizaron dos estrategias principales para mejorar el rendimiento:
 
-- Ajuste manual de hiperparámetros (Grid Search) 
+- Ajuste de hiperparámetros (Grid Search) 
 - Selección de mejores features
 
 ---
@@ -51,15 +51,15 @@ Se utilizaron dos estrategias principales para mejorar el rendimiento:
 
 | Estrategia                  | Random Forest | XGBoost    |
 |----------------------------|----------------|------------|
-| Baseline                   | 1440.67        | 1496.03    |
-| Grid Search                | 1496.78        | **1358.74**|
-| Selección de Features      | 1553.23        | 1562.91    |
+| Baseline                   | 1230.85        | 1375.80    |
+| Grid Search                | 1264.13        | **1181.38**|
+| Selección de Features      | 1553.23        | 1654.71    |
 
 ---
 
 ## 🏁 Resultados Finales
 
-- ✅ **XGBoost + GridSearch** fue el modelo más preciso con un MAE de **1358.74**.
+- ✅ **XGBoost + GridSearch** fue el modelo más preciso con un MAE de **1181.38**.
 - 🟡 **Random Forest** tuvo buen rendimiento pero fue superado tanto en precisión como en eficiencia.
 
 ---
@@ -67,9 +67,10 @@ Se utilizaron dos estrategias principales para mejorar el rendimiento:
 ## 🧾 Conclusiones
 
 - 🔥 **XGBoost se posiciona como el mejor modelo**, combinando velocidad y precisión gracias a su capacidad de boosting secuencial y ajuste fino de hiperparámetros.
-- ⚖️ **Random Forest**, aunque más interpretable y robusto, presentó un MAE ligeramente mayor y mayor tiempo de entrenamiento.
-- 🚫 La **selección de features no mejoró el rendimiento**, evidenciando la importancia de mantener la riqueza del dataset completo.
+- ⚖️ **Random Forest**, aunque más interpretable y robusto, presentó un MAE ligeramente mayor y mayor tiempo de entrenamiento. Sin embargo, en la etapa de optimización no vio mejores resultados.
+- 🚫 La **selección de features no mejoró el rendimiento**, evidenciando la importancia de mantener la riqueza del dataset completo. Ver en que casos es util hacer seleccion de mejores features.
 - 🧪 **Grid Search fue clave** para mejorar el rendimiento de XGBoost, mostrando la importancia de la búsqueda sistemática de combinaciones.
+  
 
 ---
 
